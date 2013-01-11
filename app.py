@@ -2,8 +2,7 @@
 from flask import Flask, request, jsonify, make_response, render_template, flash, redirect, url_for, session, escape, g
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.auth import Auth, AuthUser, login_required, logout
-from models.sa import get_user_class
+from models.appmodels import *
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
@@ -14,74 +13,34 @@ db = SQLAlchemy(app)
 ## Set SQL Alchemy to automatically tear down
 @app.teardown_request
 def shutdown_session(exception=None):
-    db_session.remove()
-
-# Instantiate authentication
-auth = Auth(app, login_url_name='login')
-User = get_user_class(db.Model)
-
+  db_session.remove()
 
 def index():
-    return render_template('index.html')
+  return render_template('index.html')
 
-##login methods
+def sponsors():
+  return render_template('sponsors.html')
 
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        user = User.query.filter(User.username==username).first()
-        if user is not None:
-            # Authenticate and log in!
-            if user.authenticate(request.form['password']):
-                session['username'] = request.form['username']
-                return redirect(url_for('home'))
-            else:
-                flash('Incorrect password. Please try again')
-                return render_template('login.html')
-        else:
-            flash('Incorrect username. Please try again')
-            return render_template('login.html')
-    return render_template('login.html')
+def idea():
+  if request.method == 'POST':
+    name  = request.form['name']
+    email = request.form['email']
+    idea  = request.form['idea']
+    idea = Idea(name=name, email=email, idea_text=idea_text)
 
-@login_required()
-def home():
-    ##Dump variables in templates
-    return render_template('home.html')
-
-def user_create():
-    if request.method == 'POST':
-        username = request.form['username']
-        if User.query.filter(User.username==username).first():
-            return 'User already exists.'
-        password = request.form['password']
-        user = User(username=username, password=password)
-        db.session.add(user)
-        db.session.commit()
-        return redirect(url_for('index'))
-    return render_template('user_create.html')
-
-def logout_view():
-    user_data = logout()
-    if user_data is None:
-        msg = 'No user to log out.'
-        return render_template('logout.html', msg=msg)
-    else:
-        msg = 'Logged out user {0}.'.format(user_data['username'])
-        return render_template('logout.html', msg=msg)
+    db.session.add(idea)
+    db.session.commit()
+    return redirect(url_for('index'))
+  # ideas = Idea.query.all()
+  return render_template('idea.html')#, ideas)
 
 # URLs
 app.add_url_rule('/', 'index', index)
-app.add_url_rule('/login/', 'login', login, methods=['GET', 'POST'])
-app.add_url_rule('/home/', 'home', home)
-app.add_url_rule('/users/create/', 'user_create', user_create, methods=['GET', 'POST'])
-app.add_url_rule('/logout/', 'logout', logout_view)
+app.add_url_rule('/idea/', 'idea', idea)
 
-# Secret key needed to use sessions.
-app.secret_key = 'mysecretkey'
-  
 if __name__ == "__main__":
-    try:
-        open('/tmp/app.db')
-    except IOError:
-        db.create_all()
-    app.run(debug=True,host='127.0.0.1')
+  try:
+    open('/tmp/app.db')
+  except IOError:
+    db.create_all()
+  app.run(debug=True,host='127.0.0.1')

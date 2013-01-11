@@ -1,3 +1,28 @@
 #login {
     padding: 50px;
-    }
+}
+
+#ideaform {
+  padding: 15px 0px 15px 15px;
+}
+
+#ideaform-span {
+  background-image: linear-gradient(to bottom,white,#F2F2F2);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #D4D4D4;
+}
+
+.idearow {
+  margin-bottom:20px;
+}
+
+.idea {
+  padding: 15px 15px 5px 15px;
+  background-image: linear-gradient(to bottom,white,#F2F2F2);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #D4D4D4;
+}
+
+.ideaname {
+  color:#35CDDD;
+}

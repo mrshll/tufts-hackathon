@@ -52,27 +52,24 @@
         {% endwith %}
 
 
-    <div class="navbar navbar-fixed-top"> 
-      <div class="navbar-inner"> 
-        <div class="container"> 
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-            <span class="icon-bar"></span> 
-          </a> 
-          <a class="brand" href="#">appname</a> 
-          <div class="nav-collapse"> 
-            <ul class="nav"> 
-              <li class="active"><a href="/">Home</a></li> 
-              <li><a href="#about">About</a></li> 
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="/login/">Login</a></li>
-              <li><a href="/users/create/">Signup</a></li>                
-            </ul> 
-          </div><!--/.nav-collapse --> 
-        </div> 
-      </div> 
-    </div> 
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Tufts Hackathon 2013</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/idea/">Submit An Idea</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
     <div id="container">
         <header>
@@ -80,7 +77,9 @@
         </header>
 
         <div id="main" role="main">
+          <div class="container">
             {% block main %}{% endblock %}
+          </div> <!-- /container -->
         </div>
 
         <footer>
@@ -117,6 +116,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
     <![endif]-->
-  
+
 </body>
 </html>
