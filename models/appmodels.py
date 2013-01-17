@@ -3,7 +3,6 @@ from database import Base
 import datetime
 from app import db
 
-
 class Idea(db.Model):
   id    = Column(Integer, primary_key=True)
   name  = Column(String(80), nullable=False)

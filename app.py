@@ -2,13 +2,13 @@
 from flask import Flask, request, jsonify, make_response, render_template, flash, redirect, url_for, session, escape, g
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
-from models.appmodels import *
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
 
 # Instantiate DB
 db = SQLAlchemy(app)
+from models.appmodels import *
 
 ## Set SQL Alchemy to automatically tear down
 @app.teardown_request
@@ -26,11 +26,11 @@ def idea():
     name  = request.form['name']
     email = request.form['email']
     idea  = request.form['idea']
-    idea = Idea(name=name, email=email, idea_text=idea_text)
+    idea = Idea(name=name, email=email, idea=idea)
 
     db.session.add(idea)
     db.session.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for('idea'))
   # ideas = Idea.query.all()
   return render_template('idea.html')#, ideas)
 idea.methods=['GET', 'POST']
