@@ -33,6 +33,7 @@ def idea():
     return redirect(url_for('index'))
   # ideas = Idea.query.all()
   return render_template('idea.html')#, ideas)
+idea.methods=['GET', 'POST']
 
 # URLs
 app.add_url_rule('/', 'index', index)
