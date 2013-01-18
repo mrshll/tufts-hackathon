@@ -2,7 +2,6 @@
 from flask import Flask, request, jsonify, make_response, render_template, flash, redirect, url_for, session, escape, g
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
-from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
