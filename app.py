@@ -31,8 +31,12 @@ def idea():
     db.session.add(idea)
     db.session.commit()
     return redirect(url_for('idea'))
-  # ideas = Idea.query.all()
-  return render_template('idea.html')#, ideas)
+  elif request.method == 'GET':
+    ideas = Idea.query.all()
+    return render_template('idea.html', ideas=ideas, index=range(len(ideas)))
+  else:
+    return render_template('index.html')
+
 idea.methods=['GET', 'POST']
 
 # URLs

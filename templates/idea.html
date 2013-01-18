@@ -25,88 +25,22 @@
     </form>
   </div>
   <div class="span8">
-    {# {% for idea in ideas %} #}
-    <div class="row idearow">
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-    </div>
-    <div class="row idearow">
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-    </div>
-    <div class="row idearow">
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-    </div>
-    <div class="row idearow">
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-      <div class="span3 idea">
-        <p> Create a way to track the Joey using the stars and their trajectory
-        from the cannon. If paint drips on the third lumen, we know the joey is
-        near arrival. Tie this to an app with a mobile social api that allow
-        users to drip lumen paint from their nose.</p>
-        <p class="ideaname"> Submited by Marshall Moutenot </p>
-        {# <p> {{ idea.idea }} </p> #}
-        {# <p> {{ idea.name }} </p> #}
-      </div>
-    </div>
-    {# {% endfor %} #}
+    {% for idea in ideas %}
+      {% set idea_loop = loop %}
+      {% if idea_loop.index % 2 == 1 %}
+        <div class="row idearow">
+          <div class="span3 idea">
+            <p> {{ idea.idea }} </p>
+            <p class="ideaname">{{ idea.name }}</p>
+          </div>
+      {% else %}
+          <div class="span3 idea">
+            <p> {{ idea.idea }} </p>
+            <p class="ideaname">{{ idea.name }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
