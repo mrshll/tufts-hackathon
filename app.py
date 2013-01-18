@@ -2,6 +2,7 @@
 from flask import Flask, request, jsonify, make_response, render_template, flash, redirect, url_for, session, escape, g
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
+from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
@@ -20,6 +21,12 @@ def index():
 
 def sponsors():
   return render_template('sponsors.html')
+
+def schedule():
+  return render_template('schedule.html')
+
+def resources():
+  return render_template('resources.html')
 
 def idea():
   if request.method == 'POST':
@@ -48,6 +55,9 @@ idea.methods=['GET', 'POST']
 # URLs
 app.add_url_rule('/', 'index', index)
 app.add_url_rule('/idea/', 'idea', idea)
+app.add_url_rule('/schedule/', 'schedule', schedule)
+app.add_url_rule('/resources/', 'resources', resources)
+
 
 if __name__ == "__main__":
   try:

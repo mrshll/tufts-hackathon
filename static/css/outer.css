@@ -2,6 +2,17 @@
     padding: 50px;
 }
 
+footer {
+  margin-top: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/* Ideas */
+
 #ideaform {
   padding: 15px 0px 15px 15px;
 }
@@ -34,3 +45,15 @@
 .ideaname {
   color:#35CDDD;
 }
+
+/* Schedule */
+td.time {
+  width: 70px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+td span.bold {
+  margin-right: 8px;
+}
+
