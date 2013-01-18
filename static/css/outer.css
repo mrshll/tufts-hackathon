@@ -6,6 +6,14 @@
   padding: 15px 0px 15px 15px;
 }
 
+#ideaform [type="text"],textarea {
+  width: 175px;
+}
+
+#ideaform textarea {
+  height: 150px;
+}
+
 #ideaform-span {
   background-image: linear-gradient(to bottom,white,#F2F2F2);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
