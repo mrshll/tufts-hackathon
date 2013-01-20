@@ -10,22 +10,19 @@ footer {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 979px) {
+  body {
+    padding-top:60px;
+  }
+}
 
 /* Ideas */
-
-#ideaform {
-  padding: 15px 0px 15px 15px;
-}
-
-#ideaform [type="text"],textarea {
-  width: 175px;
-}
-
 #ideaform textarea {
   height: 150px;
 }
 
 #ideaform-span {
+  padding: 15px 15px 15px 15px;
   background-image: linear-gradient(to bottom,white,#F2F2F2);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #D4D4D4;
