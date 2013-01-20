@@ -7,7 +7,7 @@ class Idea(db.Model):
   id    = Column(Integer, primary_key=True)
   name  = Column(String(80), nullable=False)
   email = Column(String(50))
-  idea  = Column(String(140))
+  idea  = Column(String(200))
 
   def __init__(self, *args, **kwargs):
     self.name  = kwargs.get('name')

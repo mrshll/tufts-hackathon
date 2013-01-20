@@ -21,6 +21,12 @@ def index():
 def sponsors():
   return render_template('sponsors.html')
 
+def schedule():
+  return render_template('schedule.html')
+
+def resources():
+  return render_template('resources.html')
+
 def idea():
   if request.method == 'POST':
     name  = request.form['name']
@@ -29,8 +35,14 @@ def idea():
     idea = Idea(name=name, email=email, idea=idea)
 
     db.session.add(idea)
-    db.session.commit()
-    return redirect(url_for('idea'))
+    try:
+      db.session.commit()
+      return redirect(url_for('idea'))
+    except:
+      db.session.rollback()
+      flash("Coundn't save your idea :( One of the fields was probably" \
+            "too long (name < 80 characters, email < 50, idea < 200)")
+      return redirect(url_for('idea'))
   elif request.method == 'GET':
     ideas = Idea.query.all()
     return render_template('idea.html', ideas=ideas, index=range(len(ideas)))
@@ -42,6 +54,9 @@ idea.methods=['GET', 'POST']
 # URLs
 app.add_url_rule('/', 'index', index)
 app.add_url_rule('/idea/', 'idea', idea)
+app.add_url_rule('/schedule/', 'schedule', schedule)
+app.add_url_rule('/resources/', 'resources', resources)
+
 
 if __name__ == "__main__":
   try:
