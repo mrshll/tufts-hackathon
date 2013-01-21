@@ -4,25 +4,31 @@
 
 {% block main %}
 <div class="row">
-  <div class="span3" id="ideaform-span">
+  <div class="span3 box" id="ideaform-span">
     <form method="POST" id="ideaform">
       <div class="row">
-        <div class="row span3">Name</div>
-        <div class="row span3"><input type="text" name="name" maxlength="80"/></div>
+        <h4 class="span3">Suggest an Idea</h4>
+      </div>
+      <div class="row">
+        <div class="span3">Your Name</div>
+        <div class="span3"><input type="text" name="name" maxlength="80" class="span3"/></div>
       </div>
       <div class="row">
         <div class="span3">Email</div>
-        <div class="span3"><input type="text" name="email" maxlength="50"/></div>
+        <div class="span3"><input type="text" name="email" maxlength="50" class="span3"/></div>
       </div>
       <div class="row">
         <div class="span3">Idea</div>
         <div class="span3">
-          <textarea name="idea" placeholder="Give us a short description..." maxlength="200"/></textarea>
+          <textarea name="idea" placeholder="Give us a short description..." class="span3" maxlength="200"/></textarea>
         </div>
       </div>
       <div class="row"><br></div>
       <div class="row">
         <div class="span3"> <input type="submit" class="btn btn-small" value="Submit &raquo;"></div>
+      </div>
+      <div class="row">
+        <p id="ideaterms" class="span3">By submitting an idea you agree that you'd be happy to see it brought to life in the hackathon and don't expect any renumeration besides gratitude.</p>
       </div>
     </form>
   </div>
@@ -31,13 +37,13 @@
       {% set idea_loop = loop %}
       {% if idea_loop.index % 2 == 1 %}
         <div class="row idearow">
-          <div class="span3 idea">
-            <p class="ideaname">{{ idea.name }}</p>
+          <div class="span3 idea box">
+            <p class="blue">{{ idea.name }}</p>
             <p> {{ idea.idea }} </p>
           </div>
       {% else %}
-          <div class="span3 idea">
-            <p class="ideaname">{{ idea.name }}</p>
+          <div class="span3 idea box">
+            <p class="blue">{{ idea.name }}</p>
             <p> {{ idea.idea }} </p>
           </div>
         </div>
