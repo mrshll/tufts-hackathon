@@ -55,6 +55,11 @@ footer {
 .ideaname {
 }
 
+#ideaterms {
+  color: gray;
+  margin-top: 15px;
+}
+
 /* Schedule */
 td.time {
   width: 70px;
