@@ -71,3 +71,7 @@ td span.bold {
   margin-right: 8px;
 }
 
+/* Resources */
+#resources-wrap a {
+  color:#049CAD;
+}
