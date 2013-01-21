@@ -4,7 +4,7 @@
 
 {% block main %}
 <div class="row">
-  <div class="span3" id="ideaform-span">
+  <div class="span3 box" id="ideaform-span">
     <form method="POST" id="ideaform">
       <div class="row">
         <div class="span3">Name</div>
@@ -31,13 +31,13 @@
       {% set idea_loop = loop %}
       {% if idea_loop.index % 2 == 1 %}
         <div class="row idearow">
-          <div class="span3 idea">
-            <p class="ideaname">{{ idea.name }}</p>
+          <div class="span3 idea box">
+            <p class="blue">{{ idea.name }}</p>
             <p> {{ idea.idea }} </p>
           </div>
       {% else %}
-          <div class="span3 idea">
-            <p class="ideaname">{{ idea.name }}</p>
+          <div class="span3 idea box">
+            <p class="blue">{{ idea.name }}</p>
             <p> {{ idea.idea }} </p>
           </div>
         </div>

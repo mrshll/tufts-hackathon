@@ -1,3 +1,4 @@
+/* Global */
 #login {
     padding: 50px;
 }
@@ -10,11 +11,30 @@ footer {
   font-weight: bold;
 }
 
+.blue {
+  color:#35CDDD;
+}
+
+.darkblue {
+  color:#049CAD;
+}
+
+.box {
+  padding: 15px 15px 15px 15px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #D4D4D4;
+}
+
+.navbar .nav > li > a {
+  padding: 12px 15px;
+}
+
 @media only screen and (min-width: 979px) {
   body {
     padding-top:60px;
   }
 }
+
 
 /* Ideas */
 #ideaform textarea {
@@ -22,10 +42,6 @@ footer {
 }
 
 #ideaform-span {
-  padding: 15px 15px 15px 15px;
-  background-image: linear-gradient(to bottom,white,#F2F2F2);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #D4D4D4;
 }
 
 .idearow {
@@ -33,14 +49,10 @@ footer {
 }
 
 .idea {
-  padding: 15px 15px 5px 15px;
-  background-image: linear-gradient(to bottom,white,#F2F2F2);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #D4D4D4;
+  padding-bottom:5px;
 }
 
 .ideaname {
-  color:#35CDDD;
 }
 
 /* Schedule */
