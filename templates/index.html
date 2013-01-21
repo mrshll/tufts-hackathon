@@ -8,26 +8,82 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Tufts Hackathon 2013</h1>
-        <p>This is Bootstrap's template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique. Note that the "Login" option above should be operational if you have installed all the dependencies specified in requirements.txt and configured your Postgres database in app.cfg.</p>
-        <p><a href = "http://hackerleague.com" class="btn btn-primary btn-large">Register &raquo;</a></p>
+        <p>Welcome to the 2nd annual Tufts Hackathon.</p>
+        <p><a href="http://hackerleague.com" class="btn btn-primary btn-large">Register &raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+        <div class="span8">
+
+            <div class="row">
+            <h2 class="row span12">Schedule</h2>
+            <table class="row span12" border="0">
+              <tr>
+                <td class="time darkblue">12:45 pm</td>
+                <td class="">Arrive, Check-in</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">1:15 pm</td>
+                <td class="">Introductions</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">1:30 pm</td>
+                <td class="">Find teams / Get Situated</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">2:00 pm</td>
+                <td class="">Workshops and Begin Hacking</td>
+              </tr>
+              <tr>
+                <td class="time darkblue"></td>
+                <td class=""><span class="darkblue">2:00 pm</span> Echonest / SendGrid</td>
+              </tr>
+              <tr>
+                <td class="time darkblue"></td>
+                <td class=""><span class="darkblue">3:00 pm</span> Twilio / Microsoft</td>
+              </tr>
+              <tr>
+                <td class="time darkblue"></td>
+                <td class=""><span class="darkblue">4:00 pm</span> Evernote / Crashlytics</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">5:30 pm</td>
+                <td class="">Dinner!</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">6:00 pm</td>
+                <td class="">HackHackHackHack</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">12:00 am</td>
+                <td class="">Midnight Ice Cream - Thanks GitHub!</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">11:30 am</td>
+                <td class="">Move to Sogo to pitch in front of your friends</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">12:00 pm</td>
+                <td class="">Lunch Provided</td>
+              </tr>
+              <tr>
+                <td class="time darkblue">12:15 pm</td>
+                <td class="">Pitches begin (2 minutes each, 2 minutes of questions, strict)</td>
+              </tr>
+            </table>
+          </div>
+
         </div>
         <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Submit an Idea</h2>
+          <p>Have an idea which would benefit the Tufts community? See other ideas and suggest your own.</p>
+          <p><a class="btn" href="/idea/">Ideas &raquo;</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h2>Sponsors</h2>
         </div>
       </div>
 
@@ -36,6 +92,5 @@
       <footer>
         <p>Tufts Hackathon 2013</p>
       </footer>
-
 
 {% endblock %}
