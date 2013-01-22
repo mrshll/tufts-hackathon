@@ -80,12 +80,14 @@
         <div id="main" role="main">
           <div class="container">
             {% block main %}{% endblock %}
+
+            <footer>
+              {% block footer %}{% endblock %}
+              <hr>
+              <p>Tufts Hackathon 2013</p>
+            </footer>
           </div> <!-- /container -->
         </div>
-
-        <footer>
-            {% block footer %}{% endblock %}
-        </footer>
     </div> <!-- end of #container -->
 
 
