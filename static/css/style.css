@@ -5,6 +5,7 @@
 
 footer {
   margin-top: 30px;
+  clear: both;
 }
 
 .bold {
@@ -42,6 +43,7 @@ footer {
 }
 
 #ideaform-span {
+  margin-bottom: 30px;
 }
 
 .idearow {
@@ -71,3 +73,7 @@ td span.bold {
   margin-right: 8px;
 }
 
+/* Resources */
+#resources-wrap a {
+  color:#049CAD;
+}
