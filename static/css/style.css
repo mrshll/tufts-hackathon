@@ -48,11 +48,6 @@ footer {
 @media only screen and (min-width: 979px) {
   body {
     padding-top: 60px; } }
-@media only screen and (max-width: 590px) {
-  .hero-unit #hero-right h1 {
-    content: "Tufts Hackathon 2013"; }
-  .hero-unit #hero-right #year {
-    display: none; } }
 /* Index */
 .hero-unit {
   background: #6599cd; }
@@ -67,7 +62,8 @@ footer {
     float: left; }
   .hero-unit #hero-right {
     float: right;
-    text-align: right; }
+    text-align: right;
+    margin-bottom: 30px; }
     .hero-unit #hero-right h1 {
       margin-top: 0;
       margin-right: -10px; }
@@ -81,11 +77,20 @@ footer {
       margin-top: 39px;
       margin-right: -60px;
       font-size: 48.5px; }
-  .hero-unit #regbtn {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
+  .hero-unit .btn {
+    float: right;
+    bottom: 0; }
 
+@media only screen and (max-width: 590px) {
+  .hero-unit #hero-right {
+    text-align: left;
+    float: left; }
+    .hero-unit #hero-right h1 {
+      font-size: 40px; }
+    .hero-unit #hero-right #year {
+      display: none; }
+    .hero-unit #hero-right .btn {
+      float: left; } }
 /* Ideas */
 #ideaform textarea {
   height: 150px; }

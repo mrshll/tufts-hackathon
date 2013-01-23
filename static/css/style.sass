@@ -61,13 +61,6 @@ footer
   body
     padding-top: 60px
 
-@media only screen and (max-width: 590px)
-  .hero-unit #hero-right
-    h1
-      content: "Tufts Hackathon 2013"
-    #year
-      display: none
-
 /* Index */
 .hero-unit
   background: $blue
@@ -79,6 +72,7 @@ footer
   #hero-right
     float: right
     text-align: right
+    margin-bottom: 30px
     h1
       margin-top: 0
       margin-right: -10px
@@ -88,11 +82,20 @@ footer
       margin-top: 39px
       margin-right: -60px
       font-size: 48.5px
-  #regbtn
-    position: absolute
+  .btn
+    float: right
     bottom: 0
-    right: 0
 
+@media only screen and (max-width: 590px)
+  .hero-unit #hero-right
+    text-align: left
+    float: left
+    h1
+      font-size: 40px
+    #year
+      display: none
+    .btn
+      float: left
 
 /* Ideas
 #ideaform textarea
