@@ -1,0 +1,125 @@
+@import "compass/css3"
+
+/* Utils */
+@mixin clearfix
+  &:before,&:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+/* Colors */
+$black: #333332
+$blue:  #6599cd
+$red:   #bf1e2e
+
+/* Fonts */
+h1,h2,h3,h4,h5,h6,.brand
+  text-transform: uppercase
+
+
+/* Global
+#login
+  padding: 50px
+
+.navbar
+  @include box-shadow(rgba(black, 0.2) 0 0 10px)
+
+.navbar-inner
+  background: $blue
+  border: none
+  .brand
+    color: $black
+    font-weight: bold
+    text-shadow: none
+
+footer
+  margin-top: 30px
+  clear: both
+
+.bold
+  font-weight: bold
+
+.blue
+  color: #35CDDD
+
+.darkblue
+  color: #049CAD
+
+.box
+  padding: 15px 15px 15px 15px
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1)
+  border: 1px solid #D4D4D4
+
+.navbar .nav > li > a
+  padding: 12px 15px
+  color: $black
+  text-shadow: none
+  font-weight: bold
+
+@media only screen and (min-width: 979px)
+  body
+    padding-top: 60px
+
+@media only screen and (max-width: 590px)
+  .hero-unit #hero-right
+    h1
+      content: "Tufts Hackathon 2013"
+    #year
+      display: none
+
+/* Index */
+.hero-unit
+  background: $blue
+  .hero-inner
+    @include clearfix
+    position: relative
+  #floppy
+    float: left
+  #hero-right
+    float: right
+    text-align: right
+    h1
+      margin-top: 0
+      margin-right: -10px
+    #year
+      float: right
+      @include transform(rotate(90deg) translateY(20px))
+      margin-top: 39px
+      margin-right: -60px
+      font-size: 48.5px
+  #regbtn
+    position: absolute
+    bottom: 0
+    right: 0
+
+
+/* Ideas
+#ideaform textarea
+  height: 150px
+
+#ideaform-span
+  margin-bottom: 30px
+
+.idearow
+  margin-bottom: 20px
+
+.idea
+  padding-bottom: 5px
+
+#ideaterms
+  color: gray
+  margin-top: 15px
+
+/* Schedule
+td.time
+  width: 70px
+  padding-right: 10px
+  text-align: right
+
+td span.bold
+  margin-right: 8px
+
+/* Resources
+#resources-wrap a
+  color: #049CAD

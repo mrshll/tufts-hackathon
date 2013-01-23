@@ -1,79 +1,117 @@
+/* Utils */
+/* Colors */
+/* Fonts */
+h1, h2, h3, h4, h5, h6, .brand {
+  text-transform: uppercase; }
+
 /* Global */
 #login {
-  padding: 50px;
-}
+  padding: 50px; }
+
+.navbar {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; }
+
+.navbar-inner {
+  background: #6599cd;
+  border: none; }
+  .navbar-inner .brand {
+    color: #333332;
+    font-weight: bold;
+    text-shadow: none; }
 
 footer {
   margin-top: 30px;
-  clear: both;
-}
+  clear: both; }
 
 .bold {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .blue {
-  color:#35CDDD;
-}
+  color: #35cddd; }
 
 .darkblue {
-  color:#049CAD;
-}
+  color: #049cad; }
 
 .box {
   padding: 15px 15px 15px 15px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #D4D4D4;
-}
+  border: 1px solid #d4d4d4; }
 
 .navbar .nav > li > a {
   padding: 12px 15px;
-}
+  color: #333332;
+  text-shadow: none;
+  font-weight: bold; }
 
 @media only screen and (min-width: 979px) {
   body {
-    padding-top:60px;
-  }
-}
-
+    padding-top: 60px; } }
+@media only screen and (max-width: 590px) {
+  .hero-unit #hero-right h1 {
+    content: "Tufts Hackathon 2013"; }
+  .hero-unit #hero-right #year {
+    display: none; } }
+/* Index */
+.hero-unit {
+  background: #6599cd; }
+  .hero-unit .hero-inner {
+    position: relative; }
+    .hero-unit .hero-inner:before, .hero-unit .hero-inner:after {
+      content: " ";
+      display: table; }
+    .hero-unit .hero-inner:after {
+      clear: both; }
+  .hero-unit #floppy {
+    float: left; }
+  .hero-unit #hero-right {
+    float: right;
+    text-align: right; }
+    .hero-unit #hero-right h1 {
+      margin-top: 0;
+      margin-right: -10px; }
+    .hero-unit #hero-right #year {
+      float: right;
+      -webkit-transform: rotate(90deg) translateY(20px);
+      -moz-transform: rotate(90deg) translateY(20px);
+      -ms-transform: rotate(90deg) translateY(20px);
+      -o-transform: rotate(90deg) translateY(20px);
+      transform: rotate(90deg) translateY(20px);
+      margin-top: 39px;
+      margin-right: -60px;
+      font-size: 48.5px; }
+  .hero-unit #regbtn {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 /* Ideas */
 #ideaform textarea {
-  height: 150px;
-}
+  height: 150px; }
 
 #ideaform-span {
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
 .idearow {
-  margin-bottom:20px;
-}
+  margin-bottom: 20px; }
 
 .idea {
-  padding-bottom:5px;
-}
-
-.ideaname {
-}
+  padding-bottom: 5px; }
 
 #ideaterms {
   color: gray;
-  margin-top: 15px;
-}
+  margin-top: 15px; }
 
 /* Schedule */
 td.time {
   width: 70px;
   padding-right: 10px;
-  text-align: right;
-}
+  text-align: right; }
 
 td span.bold {
-  margin-right: 8px;
-}
+  margin-right: 8px; }
 
 /* Resources */
 #resources-wrap a {
-  color:#049CAD;
-}
+  color: #049cad; }
