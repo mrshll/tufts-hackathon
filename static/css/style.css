@@ -8,9 +8,6 @@ h1, h2, h3, h4, h5, h6, .brand {
 #login {
   padding: 50px; }
 
-.container {
-  max-width: 1000px; }
-
 .navbar {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
@@ -36,10 +33,10 @@ footer {
   font-weight: bold; }
 
 .blue {
-  color: #35cddd; }
+  color: #6599cd; }
 
 .darkblue {
-  color: #049cad; }
+  color: #6599cd; }
 
 .box {
   padding: 15px 15px 15px 15px;
@@ -85,6 +82,8 @@ footer {
       margin-right: -60px;
       font-size: 48.5px; }
   .hero-unit .btn {
+    color: #333332;
+    font-weight: bold;
     float: right;
     bottom: 0; }
 
@@ -106,6 +105,13 @@ footer {
     font-size: 1.3em;
     padding-right: 5px; }
 
+@media only screen and (min-width: 767px) {
+  #sponsors {
+    width: 100%; }
+    #sponsors div {
+      float: none;
+      margin: auto;
+      width: 724px; } }
 /* Ideas */
 #ideaform textarea {
   height: 150px; }

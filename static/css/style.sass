@@ -24,9 +24,6 @@ h1,h2,h3,h4,h5,h6,.brand
 #login
   padding: 50px
 
-.container
-  max-width: 1000px
-
 .navbar
   @include box-shadow(rgba(black, 0.2) 0 0 10px)
   .nav > .active > a
@@ -50,10 +47,10 @@ footer
   font-weight: bold
 
 .blue
-  color: #35CDDD
+  color: $blue
 
 .darkblue
-  color: #049CAD
+  color: $blue
 
 .box
   padding: 15px 15px 15px 15px
@@ -92,6 +89,8 @@ footer
       margin-right: -60px
       font-size: 48.5px
   .btn
+    color: $black
+    font-weight: bold
     float: right
     bottom: 0
 
@@ -114,6 +113,15 @@ footer
     text-decoration: underline
     font-size: 1.3em
     padding-right: 5px
+
+
+@media only screen and (min-width: 767px)
+  #sponsors
+    width: 100%
+    div
+      float: none
+      margin: auto
+      width: 724px
 
 /* Ideas
 #ideaform textarea

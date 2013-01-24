@@ -20,9 +20,9 @@
       </div>
 
       <!-- Example row of columns -->
-      <div class="row">
+      <div class="row"> <!-- middle three things row -->
         <div class="span4">
-            <div class="row">
+          <div class="row">
             <h2 class="row span12">Schedule</h2>
             <table class="row span12" border="0">
               <tr>
@@ -79,13 +79,14 @@
               </tr>
             </table>
           </div>
-
         </div>
+
         <div class="span4">
           <h2>Submit an Idea</h2>
           <p>Have an idea which would benefit the Tufts community? See other ideas and suggest your own.</p>
           <p><a class="btn" href="/idea/">Ideas &raquo;</a></p>
         </div>
+
         <div class="span4">
           <div class="row span4">
             <h2>Find Teammates</h2>
@@ -96,13 +97,16 @@
           </div>
           <div id="socialrow" class="row span4">
             <h2>Social</h2>
-            <a href="https://www.facebook.com/events/412615728816180/"><span class="social">Bring Your Friends</span></a>
+            <a href="https://www.facebook.com/events/412615728816180/"><span class="social">Facebook Event</span></a>
             <a href="https://twitter.com/search/realtime?q=%23TuftsHackathon&src=typd"><span class="social">#TuftsHackathon</span></a>
           </div>
         </div>
+      </div> <!-- end three things row with schedule, etc -->
 
-      <div class="row">
-        <img src="/static/img/sponsors.png" class="span12"/>
+      <div id="sponsors" class="row">
+        <div class="span12">
+          <img src="/static/img/sponsors.png"/>
+        </div>
       </div>
 
 {% endblock %}
