@@ -6,6 +6,7 @@ from random import shuffle
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 # Instantiate DB
 db = SQLAlchemy(app)
