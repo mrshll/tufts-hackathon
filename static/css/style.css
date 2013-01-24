@@ -95,6 +95,15 @@ footer {
       display: none; }
     .hero-unit #hero-right .btn {
       float: left; } }
+
+#socialrow {
+  margin-bottom: 40px; }
+  #socialrow .social {
+    color: #6599cd;
+    text-decoration: underline;
+    font-size: 1.3em;
+    padding-right: 5px; }
+
 /* Ideas */
 #ideaform textarea {
   height: 150px; }
