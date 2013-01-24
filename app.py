@@ -7,7 +7,13 @@ import os
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+if 'DATABASE_URL' in os.environ:
+  app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+  port = int(os.environ.get('PORT', 33507))
+  host = '0.0.0.0'
+else:
+  port = 5000
+  host = '127.0.0.1'
 
 # Instantiate DB
 db = SQLAlchemy(app)
@@ -60,4 +66,4 @@ if __name__ == "__main__":
     open('/tmp/app.db')
   except IOError:
     db.create_all()
-  app.run(port=int(os.environ['PORT']))
+  app.run(port=port, host=host)
