@@ -61,4 +61,4 @@ if __name__ == "__main__":
     open('/tmp/app.db')
   except IOError:
     db.create_all()
-  app.run(port=port)
+  app.run(port=port, host='0.0.0.0')
