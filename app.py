@@ -3,9 +3,11 @@ from flask import Flask, request, jsonify, make_response, render_template, flash
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
 from random import shuffle
+import os
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 # Instantiate DB
 db = SQLAlchemy(app)
@@ -58,4 +60,4 @@ if __name__ == "__main__":
     open('/tmp/app.db')
   except IOError:
     db.create_all()
-  app.run(debug=True, host='127.0.0.1')
+  app.run()
