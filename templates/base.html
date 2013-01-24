@@ -63,9 +63,9 @@
           <a class="brand" href="/">Tufts Hackathon 2013</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/idea/">Submit An Idea</a></li>
-              <li><a href="/resources/">Resources</a></li>
+              <li {% if page_name == "index" %} class="active" {% endif %}><a href="/">Home</a></li>
+              <li {% if page_name == "idea" %} class="active" {% endif %}><a href="/idea/">Submit An Idea</a></li>
+              <li {% if page_name == "resources" %} class="active" {% endif %}><a href="/resources/">Resources</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

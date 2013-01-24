@@ -9,9 +9,11 @@
     clear: both
 
 /* Colors */
-$black: #333332
-$blue:  #6599cd
-$red:   #bf1e2e
+$black:     #333332
+$blue:      #6599cd
+$lightblue: rgb(179, 213, 247)
+$grey:      rgb(170, 200, 231)
+$red:       #bf1e2e
 
 /* Fonts */
 h1,h2,h3,h4,h5,h6,.brand
@@ -22,8 +24,13 @@ h1,h2,h3,h4,h5,h6,.brand
 #login
   padding: 50px
 
+
 .navbar
   @include box-shadow(rgba(black, 0.2) 0 0 10px)
+  .nav > .active > a
+    background-color: $lightblue
+    &:hover
+      background-color: $grey
 
 .navbar-inner
   background: $blue
