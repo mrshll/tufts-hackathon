@@ -97,6 +97,14 @@ footer {
       display: none; }
     .hero-unit #hero-right .btn {
       float: left; } }
+@media only screen and (max-width: 400px) {
+  .hero-unit #hero-right h1 {
+    font-size: 30px; }
+  .hero-unit #hero-right p {
+    font-size: 12px; }
+
+  .navbar .brand {
+    font-size: 16px; } }
 #socialrow {
   margin-bottom: 40px; }
   #socialrow .social {
