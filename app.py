@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, make_response, render_template, flash
 from models.database import db_session
 from flask.ext.sqlalchemy import SQLAlchemy
 from random import shuffle
+import os
 
 app = Flask(__name__)
 app.config.from_pyfile('app.cfg')
