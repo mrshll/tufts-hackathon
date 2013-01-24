@@ -17,13 +17,10 @@ def shutdown_session(exception=None):
   db_session.remove()
 
 def index():
-  return render_template('index.html')
-
-def sponsors():
-  return render_template('sponsors.html')
+  return render_template('index.html', page_name="index")
 
 def resources():
-  return render_template('resources.html')
+  return render_template('resources.html', page_name="resources")
 
 def idea():
   if request.method == 'POST':
@@ -44,7 +41,7 @@ def idea():
   elif request.method == 'GET':
     ideas = Idea.query.all()
     shuffle(ideas)
-    return render_template('idea.html', ideas=ideas, index=range(len(ideas)))
+    return render_template('idea.html', page_name="idea", ideas=ideas, index=range(len(ideas)))
   else:
     return render_template('index.html')
 

@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, .brand {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; }
+  .navbar .nav > .active > a {
+    background-color: #b3d5f7; }
+    .navbar .nav > .active > a:hover {
+      background-color: #aac8e7; }
 
 .navbar-inner {
   background: #6599cd;
