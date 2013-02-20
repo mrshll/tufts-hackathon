@@ -115,6 +115,9 @@ footer {
     font-size: 1.3em;
     padding-right: 5px; }
 
+#address .span2:first-child {
+  margin-left: 0px; }
+
 @media only screen and (min-width: 767px) {
   #sponsors {
     width: 100%; }
