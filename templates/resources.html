@@ -4,39 +4,79 @@
 
 {% block main %}
 
-  <div id="resources-wrap">
-    <div class="row">
-      <h2 class=span12">Resources</h2>
+<div id="resources-wrap">
+  <div class="row">
+    <h2 class=span12">Resources</h2>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h4>Vim</h4>
+      <p><a href="http://www.openvim.com/tutorial.html">Introductory in browser Vim tutorial</a></p>
+      <p><a href="http://jrmiii.com/attachments/Vim.pdf">Vim command cheat sheet (pdf)</a></p>
     </div>
-    <div class="row">
-      <div class="span4">
-        <h4>Vim</h4>
-        <p><a href="http://www.openvim.com/tutorial.html">Introductory in browser Vim tutorial</a></p>
-        <p><a href="http://jrmiii.com/attachments/Vim.pdf">Vim command cheat sheet (pdf)</a></p>
-      </div>
-      <div class="span4">
-        <h4>Hack Packs</h4>
-        <p><a href="https://github.com/thoughtbot/laptop">Thoughtbot's Install everything you need for Rails development on a mac in one step</a></p>
-        <p><a href="https://github.com/pivotal/pivotal_workstation">Pivotal's Get a mac set up with pretty much everything</a></p>
-      </div>
-      <div class="span4">
-        <h4>Front-End Web Development</h4>
-        <p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
-        <p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap - CSS Scaffolding</a></p>
-        <p><a href="http://sass-lang.com/">SASS - Make writing CSS suck less</a></p>
-        <p><a href="http://bourbon.io/">Bourbon - Mixins for SASS, forget about vendor prefixes</a></p>
-      </div>
+    <div class="span4">
+      <h4>Hack Packs</h4>
+      <p><a href="https://github.com/thoughtbot/laptop">Thoughtbot's Install everything you need for Rails development on a mac in one step</a></p>
+      <p><a href="https://github.com/pivotal/pivotal_workstation">Pivotal's Get a mac set up with pretty much everything</a></p>
     </div>
-    <div class="row">
-      <div class="span4">
-        <h4>Datasets</h4>
-        <p><a href="http://cleanweb.co/datasets/">Cleanweb's collection of national datasets - hack on real data</a></p>
-      </div>
-      <div class="span4">
-        <h4>Deploy Your Website</h4>
-        <p><a href="https://devcenter.heroku.com/articles/quickstart">Heroku Quickstart</a></p>
-      </div>
+    <div class="span4">
+      <h4>Front-End Web Development</h4>
+      <p><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></p>
+      <p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap - CSS Scaffolding</a></p>
+      <p><a href="http://sass-lang.com/">SASS - Make writing CSS suck less</a></p>
+      <p><a href="http://bourbon.io/">Bourbon - Mixins for SASS, forget about vendor prefixes</a></p>
     </div>
   </div>
+  <div class="row">
+    <div class="span4">
+      <h4>Datasets</h4>
+      <p><a href="http://cleanweb.co/datasets/">Cleanweb's collection of national datasets - hack on real data</a></p>
+    </div>
+    <div class="span4">
+      <h4>Deploy Your Website</h4>
+      <p><a href="https://devcenter.heroku.com/articles/quickstart">Heroku Quickstart</a></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="span6">
+      <h4>Evernote API - Getting Started</h4>
+      <p>Information for Developers using the Evernote API</p>
+      <h5>Document at dev.evernote.com</h5>
+      <p>Our <a href="http://dev.evernote.com">developer website</a> contains everything you need to get started building apps using the Evernote API.  The following sections are the 4 steps in buiding an app with Evernote API:</p>
+      <h5>Accessing the Evernote API</h5>
+      <p>To connect to the Evernote API service, you will need one of the
+      following:</p>
+      <ul>
+        <li>Evernote API Key: The standard OAuth method for granting access to a user's notes.</li>
+        <li>Learn more: <a href="http://dev.evernote.com/start/core/authentication.php">Authentication</a></li>
+        <li>Developer Token: a quick way for developers to test the API on
+        their own account. Learn more: <a href="http://dev.evernote.com/start/core/authentication.php#devtoken">Dev Token</a></li>
+        <li>Register a new token: <a href="https://sandbox.evernote.com/api/DeveloperToken.action">https://sandbox.evernote.com/api/DeveloperToken.action</a></li>
+      </ul>
+      <h5>Choose your Development Kit (SDK)</h5>
+      <p>All our guides can be reviewed here:<a
+        href="https://dev.evernote.com/start/guides/">Guides</a>
+      We maintain all our SKDs on <a
+        href="https://github.com/evernote">GITHUB&lt;3</a></p>
+      <h5>Build your project in the Evernote Sandbox Environment</h5>
+      <p>You can use the Evernote API right away in hte locked down testing
+      environment: <a
+        href="http://sandbox.evernote.com">"http://sandbox.evernote.com</a>
+      To use this system, you will want to create a test account at <a
+        href="http://sandbox.evernote.com">Sandbox</a></p>
+      <h5>Sample Notes</h5>
+      <p>We have created a new sample Evernote account on
+      sandbox.evernote.com so that you can import them into your test
+      developer accounts.</p>
 
-{% endblock %}
+      <p><b>General cooking notes:</b> <a href="http://sandbox.evernote.com/pub/evernotedev/cooking_notes">http://sandbox.evernote.com/pub/evernotedev/cooking_notes</a></p>
+      <p><b>Evernote Food notes:</b> <a href="http://sandbox.evernote.com/pub/evernotedev/evernote_food_samples">http://sandbox.evernote.com/pub/evernotedev/evernote_food_samples</a></p>
+
+      <p>Here is a collection of Evernote XML aka .enex files for testing with real sample notes: <a href="http://dev.evernote.com/documentation/shared/samples/enex-samples/">http://dev.evernote.com/documentation/shared/samples/enex-samples/</a> These archives of sample notes can be really helpful in formatting your content when sending to and from Evernote.</p>
+
+    </div>
+  </div>
+</div>
+
+  {% endblock %}
